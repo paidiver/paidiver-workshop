@@ -1,0 +1,36 @@
+general:
+  input_path: "images"
+  output_path: "output"
+  metadata_path: "metadata/metadata_benthic_csv.csv"
+  metadata_type: "CSV_FILE"
+  image_type: "PNG"
+  n_jobs: 1
+  sampling:
+    - mode: "percent"
+      name: "sampling"
+      params:
+        value: 0.1
+
+steps:
+  - colour:
+      name: "colour_alteration"
+      mode: "colour_alteration"
+      params:
+        method:
+          "white_balance"
+  - colour:
+      name: "gaussian_blur"
+      mode: "gaussian_blur"
+      params:
+        sigma: 1.0
+
+  - colour:
+      name: "sharpen"
+      mode: "sharpen"
+      params:
+        alpha: 1.5
+        beta: -0.5
+
+  - colour:
+      name: "contrast"
+      mode: "contrast"

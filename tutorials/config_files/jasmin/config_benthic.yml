@@ -1,0 +1,48 @@
+general:
+  input_path: "images"
+  output_path: "output"
+  metadata_path: "metadata/metadata_benthic_ifdo.json"
+  metadata_type: "IFDO"
+  image_type: "PNG"
+  n_jobs: 8
+  rename: "datetime"
+  sampling:
+    - mode: "fixed"
+      params:
+        value: 10
+steps:
+  - colour:
+      name: "colour_correction"
+      mode: "grayscale"
+
+  - sampling:
+      name: "datetime"
+      mode: "datetime"
+      # test: True
+      params:
+        min: "2016-05-11 04:14:00"
+        max: "2016-05-11 09:26:12"
+
+  - colour:
+      name: "colour_correction"
+      mode: "gaussian_blur"
+      params:
+        sigma: 1.0
+
+  - colour:
+      name: "sharpen"
+      mode: "sharpen"
+      params:
+        alpha: 1.5
+        beta: -0.5
+
+  - colour:
+      name: "contrast"
+      mode: "contrast"
+
+  - convert:
+      name: "crop_images"
+      mode: "crop"
+      params:
+        x: [0, -1]
+        y: [0, -1000]
