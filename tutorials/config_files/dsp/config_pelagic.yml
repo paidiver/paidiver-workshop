@@ -1,5 +1,5 @@
 general:
-  input_path: "images"
+  input_path: "/groups/paidiver/images/pelagic"
   output_path: "output"
   metadata_path: "metadata/metadata_pelagic.csv"
   metadata_type: "CSV_FILE"

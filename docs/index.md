@@ -17,11 +17,11 @@ For this workshop, we will be using two remote services:
 
 The following tutorials will be used during the workshop:
 
-1) **[Introduction](https://github.com/CANARI-sprint/tutorials/blob/main/notebooks/1_basic_manipulation.ipynb)** – Learn how to run a simple pipeline using Paidiverpy.
+1) **[Introduction](https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/1-introduction.ipynb)** – Learn how to run a simple pipeline using Paidiverpy.
 
-2) **[Benthic Dataset](https://github.com/CANARI-sprint/tutorials/blob/main/notebooks/2_export_to_netcdf.ipynb)** – Instructions and exercises for working with a benthic dataset.
+2) **[Benthic Dataset](https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/2-benthic.ipynb)** – Instructions and exercises for working with a benthic dataset.
 
-3) **[Pelagic Dataset](https://github.com/CANARI-sprint/tutorials/blob/main/notebooks/3_climatology_tutorial.ipynb)** – Instructions and exercises for working with a pelagic dataset.
+3) **[Pelagic Dataset](https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/3-pelagic.ipynb)** – Instructions and exercises for working with a pelagic dataset.
 
 ## Datasets
 

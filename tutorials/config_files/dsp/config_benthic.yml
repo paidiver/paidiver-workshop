@@ -1,5 +1,5 @@
 general:
-  input_path: "images"
+  input_path: "/groups/paidiver/images/benthic_haigfras"
   output_path: "output"
   metadata_path: "metadata/metadata_benthic_ifdo.json"
   metadata_type: "IFDO"

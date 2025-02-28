@@ -69,21 +69,21 @@ If the output is `0.1.2`, your environment is correctly set up.
 
 To obtain the example code for the workshop:
 
-1. Open a terminal and run:
+- Open a terminal and run:
 
-   ```bash
-   cd ~
-   git clone https://github.com/paidiver/paidiver-workshop.git
-   ```
+```bash
+cd ~
+git clone https://github.com/paidiver/paidiver-workshop.git
+```
 
-   This will clone the repository into your DSP home directory.
+  This will clone the tutorials repository into your DSP home directory.
 
-2. Ensure you are in your home directory by clicking the **home folder** icon in the Jupyter file browser.
+- Ensure you are in your home directory by clicking the **home folder** icon in the Jupyter file browser.
 
    ![Jupyter home directory DSP icon](assets/jupyter-homefolder_dsp.png)
 
-3. Open the `paidiver-workshop` folder and navigate to the `tutorials` subfolder.
-4. You will find three Jupyter Notebook tutorials that will be used in this workshop.
+- Open the `paidiver-workshop` folder and navigate to the `tutorials` subfolder.
+- You will find three Jupyter Notebook tutorials that will be used in this workshop.
 
 ---
 
