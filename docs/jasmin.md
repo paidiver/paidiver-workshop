@@ -62,9 +62,9 @@ If the output is `0.1.2`, your environment is correctly set up.
 
 ---
 
-### Downloading the PAIDIVER Example Code
+### Downloading the PAIDIVERPY Tutorials
 
-To obtain the example code for the workshop:
+To obtain the tutorials for the workshop:
 
 - Open a terminal and run:
 
