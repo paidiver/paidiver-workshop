@@ -1,0 +1,63 @@
+general:
+  input_path: "/groups/paidiver/images/pelagic"
+  output_path: "output"
+  metadata_path: "metadata/metadata_pelagic.csv"
+  metadata_type: "CSV_FILE"
+  image_type: "BMP"
+
+#  convert:
+#    - mode: "bits"
+#      params:
+#        output_bits: 8
+
+steps:
+
+  # - sampling:
+  #     mode: "depth"
+  #     params:
+  #       by: "lower"
+  #       value: 10
+
+  - colour:
+      name: "contrast"
+      mode: "contrast"
+      params:
+        method: "clahe" # or "gamma"
+        clip_limit: 0.01
+        gamma_value: 2
+
+  - colour:
+      name: "illumination_correction"
+      mode: "illumination_correction"
+      params:
+        method: "rolling"
+        radius: 10
+
+  - colour:
+      name: "gaussian_blur"
+      mode: "gaussian_blur"
+      params:
+        sigma: 3
+
+  - colour:
+      name: "sharpen"
+      mode: "sharpen"
+      params:
+        alpha: 3
+        beta: 1
+
+  - colour:
+      name: "deblur"
+      mode: "deblur"
+      params:
+        method: "wiener"
+        psf_type: "gaussian" # or "motion" or "gaussian"
+        sigma: 3
+        angle: 1
+
+  - custom:
+      name: "invert"
+      file_path: "custom_algorithm/invert.py"
+      class_name: "InvertColour"
+      dependencies:
+        - "numpy"

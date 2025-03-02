@@ -1,0 +1,11 @@
+site_name: PAIDIVER Workshop
+site_dir: public
+nav:
+  - 'index.md'
+  - 'DSP.md'
+  - 'jasmin.md'
+plugins:
+  - search
+  - print-site
+markdown_extensions:
+  - attr_list

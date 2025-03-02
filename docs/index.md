@@ -17,28 +17,36 @@ For this workshop, we will be using two remote services:
 
 The following tutorials will be used during the workshop:
 
-1) **[Introduction](https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/1-introduction.ipynb)** – Learn how to run a simple pipeline using Paidiverpy.
+### 1) Introduction
 
-2) **[Benthic Dataset](https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/2-benthic.ipynb)** – Instructions and exercises for working with a benthic dataset.
-
-3) **[Pelagic Dataset](https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/3-pelagic.ipynb)** – Instructions and exercises for working with a pelagic dataset.
-
-## Datasets
-
-### Benthic Images (2012) – Haig Fras, UK
-- **Equipment:** Camera mounted on the front of an ROV
+- **Goal:** Learn how a Jupyter notebook works and how to run a simple pipeline using `Paidiverpy`
+- **Link:** https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/1-introduction.ipynb
+- **Dataset:**
+    - Benthic Images (2018) – Clarion Clipperton Zone (~5000m depth)
+    - Equipment: Camera mounted on the front of an ROV
 
 <img src="assets/benthic_hf2.png" alt="Haig Fras Image 1" style="width:100px;"/>
 <img src="assets/benthic_hf1.png" alt="Haig Fras Image 2" style="width:500px;"/>
 
-### Benthic Images (2018) – Clarion Clipperton Zone (~5000m depth)
-- **Equipment:** Camera mounted on the front of an ROV
+
+### 2) Benthic Dataset
+
+- **Goal:** Instructions and exercises for working with a benthic dataset.
+- **Link:** https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/2-benthic.ipynb
+- **Dataset:**
+    - Benthic Images (2012) – Haig Fras, UK.
+    - Equipment: Camera mounted on the front of an ROV
 
 <img src="assets/benthic_cc2.png" alt="Clarion Clipperton Image 1" style="width:100px;"/>
 <img src="assets/benthic_cc1.png" alt="Clarion Clipperton Image 2" style="width:500px;"/>
 
-### Pelagic Plankton Images (2023) – DY157 RSS Discovery Cruise
-- **Equipment:** Red camera frame deployed vertically via winches
+### 3) Pelagic Dataset
+
+- **Goal:** Instructions and exercises for working with a pelagic dataset.
+- **Link:** https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/3-pelagic.ipynb
+- **Dataset:**
+    - Pelagic Plankton Images (2023) – DY157 RSS Discovery Cruise
+    - Equipment: Red camera frame deployed vertically via winches
 
 <img src="assets/pelagic1.png" alt="Pelagic Image 1" style="width:400px;"/>
 <img src="assets/pelagic2.png" alt="Pelagic Image 2" style="width:300px;"/>
