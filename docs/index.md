@@ -48,5 +48,6 @@ The following tutorials will be used during the workshop:
     - Pelagic Plankton Images (2023) – DY157 RSS Discovery Cruise
     - Equipment: Red camera frame deployed vertically via winches
 
+<img src="assets/pelagic3.png" alt="Pelagic Image 2" style="width:300px;"/>
+<img src="assets/pelagic2.png" alt="Pelagic Image 2" style="width:150px;"/>
 <img src="assets/pelagic1.png" alt="Pelagic Image 1" style="width:400px;"/>
-<img src="assets/pelagic2.png" alt="Pelagic Image 2" style="width:300px;"/>
