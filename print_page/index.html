@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Print Site - PAIDIVER Workshop</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../css/print-site-enum-headings1.css" rel="stylesheet">
+        <link href="../css/print-site-enum-headings2.css" rel="stylesheet">
+        <link href="../css/print-site-enum-headings3.css" rel="stylesheet">
+        <link href="../css/print-site-enum-headings4.css" rel="stylesheet">
+        <link href="../css/print-site-enum-headings5.css" rel="stylesheet">
+        <link href="../css/print-site-enum-headings6.css" rel="stylesheet">
+        <link href="../css/print-site.css" rel="stylesheet">
+        <link href="../css/print-site-mkdocs.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">PAIDIVER Workshop</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Workshop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DSP/" class="nav-link">DSP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../jasmin/" class="nav-link">Jasmin</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="0"><a href="#" class="nav-link">1. Workshop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#dsp" class="nav-link">2. DSP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#jasmin" class="nav-link">3. Jasmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index"><h1 id="index-workshop">Workshop</h1>
+<p>This page provides all the necessary setup instructions to help you make the most of the workshop. It also includes details about the dataset we will be using and the example notebooks that will guide our exercises.</p>
+<h2 id="index-coding-environment">Coding environment</h2>
+<p>To ensure a smooth experience, we have set up a ready-to-use environment where all dependencies and example datasets are pre-installed. This means you won’t need to worry about installing anything manually—everything is configured and ready to go.</p>
+<p>The environment is hosted on <strong>notebook servers</strong>, which are remote computing resources designed to facilitate interactive coding. These servers allow users to create, edit, and run Jupyter notebooks, which contain text, code, equations, and visualizations. Running code on a <strong>remote notebook server</strong> means computations will be performed on a powerful server rather than your local computer. This provides faster processing, access to specialized resources, and the flexibility to work from anywhere with an internet connection.</p>
+<p>For this workshop, we will be using two remote services:</p>
+<ul>
+<li><strong>NOC's Data Science Platform (DSP)</strong> – for NOC staff: <a href="#dsp">More information</a></li>
+<li><strong>JASMIN</strong> – for external users: <a href="#jasmin">More information</a></li>
+</ul>
+<h2 id="index-tutorials">Tutorials</h2>
+<p>The following tutorials will be used during the workshop:</p>
+<h3 id="index-1-introduction">1) Introduction</h3>
+<ul>
+<li><strong>Goal:</strong> Learn how a Jupyter notebook works and how to run a simple pipeline using <code>Paidiverpy</code></li>
+<li><strong>Link:</strong> https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/1-introduction.ipynb</li>
+<li><strong>Dataset:</strong><ul>
+<li>Benthic Images (2018) – Clarion Clipperton Zone (~5000m depth)</li>
+<li>Equipment: Camera mounted on the front of an ROV</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/benthic_hf2.png" alt="Haig Fras Image 1" style="width:100px;"/>
+<img src="../assets/benthic_hf1.png" alt="Haig Fras Image 2" style="width:500px;"/></p>
+<h3 id="index-2-benthic-dataset">2) Benthic Dataset</h3>
+<ul>
+<li><strong>Goal:</strong> Instructions and exercises for working with a benthic dataset.</li>
+<li><strong>Link:</strong> https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/2-benthic.ipynb</li>
+<li><strong>Dataset:</strong><ul>
+<li>Benthic Images (2012) – Haig Fras, UK.</li>
+<li>Equipment: Camera mounted on the front of an ROV</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/benthic_cc2.png" alt="Clarion Clipperton Image 1" style="width:100px;"/>
+<img src="../assets/benthic_cc1.png" alt="Clarion Clipperton Image 2" style="width:500px;"/></p>
+<h3 id="index-3-pelagic-dataset">3) Pelagic Dataset</h3>
+<ul>
+<li><strong>Goal:</strong> Instructions and exercises for working with a pelagic dataset.</li>
+<li><strong>Link:</strong> https://github.com/paidiver/paidiver-workshop/blob/main/tutorials/3-pelagic.ipynb</li>
+<li><strong>Dataset:</strong><ul>
+<li>Pelagic Plankton Images (2023) – DY157 RSS Discovery Cruise</li>
+<li>Equipment: Red camera frame deployed vertically via winches</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/pelagic6.png" alt="Pelagic Image 2" style="width:300px;"/>
+<img src="../assets/pelagic5.png" alt="Pelagic Image 2" style="width:150px;"/>
+<img src="../assets/pelagic4.png" alt="Pelagic Image 1" style="width:400px;"/></p></section><section class="print-page" id="dsp"><h1 id="dsp-dsp">DSP</h1><h2 id="dsp-documentation">DSP Documentation</h2>
+<h3 id="dsp-logging-into-the-dsp">Logging into the DSP</h3>
+<p>To access the DSP environment, follow these steps:</p>
+<ol>
+<li>Open your web browser and navigate to <a href="https://notebooks.noc.ac.uk/">https://notebooks.noc.ac.uk/</a>.</li>
+<li>Log in using your NOC Southampton UNIX username and password.</li>
+<li>If you do not have an account or have forgotten your credentials, please ask us for a temporary login details.</li>
+<li>Select an image to run. You can choose the default option and click <strong>Start</strong>.</li>
+</ol>
+<p><img alt="Server options" src="../assets/server_options.png" /></p>
+<ol>
+<li>Once started, the Jupyter Notebook interface will appear. You can create a new notebook or open a terminal.</li>
+</ol>
+<p>Your DSP home directory and group workspaces will be accessible from within the notebook environment.</p>
+<hr />
+<h3 id="dsp-setting-up-the-paidiverpy-conda-environment">Setting up the PAIDIVERPY Conda Environment</h3>
+<p>A preconfigured PAIDIVERPY Conda environment is available for use. This environment includes all necessary packages and dependencies and is built using the <code>environment.yml</code> file from the <a href="https://github.com/paidiver/paidiverpy/blob/main/environment.yml">Paidiverpy GitHub repository</a>.</p>
+<p>Since the environment is stored in a non-standard location (<code>/groups/paidiver/paidiver-env</code>), Jupyter will not detect it automatically. Follow these steps to set it up:</p>
+<h4 id="dsp-1-open-a-terminal">1. Open a Terminal</h4>
+<p>From the Jupyter launcher, click the <strong>Terminal</strong> icon.</p>
+<h4 id="dsp-2-register-the-paidiver-kernel">2. Register the PAIDIVER Kernel</h4>
+<p>Run the following command:</p>
+<pre><code class="language-bash">mamba run -p /groups/paidiver/paidiver-env python -m ipykernel install --user --name PAIDIVER
+</code></pre>
+<h4 id="dsp-3-troubleshooting">3. Troubleshooting</h4>
+<p>If the command above fails, try running these commands first, then repeat step 2:</p>
+<pre><code class="language-bash">mamba init
+exec bash
+</code></pre>
+<h4 id="dsp-4-launch-jupyter-with-the-paidiver-environment">4. Launch Jupyter with the PAIDIVER Environment</h4>
+<ul>
+<li>Open a new Jupyter launcher by clicking <strong>File</strong> &gt; <strong>New Launcher</strong>.</li>
+<li>A new notebook and console option named <strong>PAIDIVER</strong> should now be available (this may take about a minute to appear):</li>
+</ul>
+<p><img alt="Jupyter kernel choice mine" src="../assets/jupyter-kernel-choice-mine.png" />
+- Click on <strong>PAIDIVER</strong> to open a notebook.</p>
+<h4 id="dsp-5-verify-the-installation">5. Verify the Installation</h4>
+<p>Run the following command in the first cell:</p>
+<pre><code class="language-python">import paidiverpy
+paidiverpy.__version__
+</code></pre>
+<p>If the output is <code>0.1.2</code>, your environment is correctly set up.</p>
+<hr />
+<h3 id="dsp-downloading-the-paidiverpy-tutorials">Downloading the PAIDIVERPY Tutorials</h3>
+<p>To obtain the tutorials for the workshop:</p>
+<ul>
+<li>Open a terminal and run:</li>
+</ul>
+<pre><code class="language-bash">cd ~
+git clone https://github.com/paidiver/paidiver-workshop.git
+</code></pre>
+<p>This will clone the tutorials repository into your DSP home directory.</p>
+<ul>
+<li>Ensure you are in your home directory by clicking the <strong>home folder</strong> icon in the Jupyter file browser.</li>
+</ul>
+<p><img alt="Jupyter home directory DSP icon" src="../assets/jupyter-homefolder_dsp.png" /></p>
+<ul>
+<li>Open the <code>paidiver-workshop</code> folder and navigate to the <code>tutorials</code> subfolder.</li>
+<li>You will find three Jupyter Notebook tutorials that will be used in this workshop.</li>
+</ul>
+<hr />
+<h3 id="dsp-running-an-example-notebook">Running an Example Notebook</h3>
+<ol>
+<li>Open the <code>paidiver-workshop</code> folder containing the cloned repository.</li>
+<li>Navigate to the <code>tutorials</code> folder.</li>
+<li>Open the <code>introduction.ipynb</code> notebook.</li>
+<li>If prompted to select a kernel, choose <strong>PAIDIVER</strong>.</li>
+</ol>
+<p><img alt="Jupyter kernel choice" src="../assets/jupyter-kernel-choice-2.png" /></p>
+<p>You are now ready to start working with PAIDIVERPY in DSP!</p></section><section class="print-page" id="jasmin"><h1 id="jasmin-jasmin">Jasmin</h1><h2 id="jasmin-documentation">JASMIN Documentation</h2>
+<h3 id="jasmin-logging-into-the-jasmin">Logging into the JASMIN</h3>
+<p>To access the JASMIN environment, follow these steps:</p>
+<ol>
+<li>In your web browser visit <a href="https://notebooks.jasmin.ac.uk">https://notebooks.jasmin.ac.uk</a></li>
+<li>Login using your JASMIN username and password</li>
+<li>You will then be emailed a one time code, paste this into the verification code box.</li>
+<li>A Jupyter notebook interface will now be started and you can create a new notebook or open a terminal.</li>
+</ol>
+<p>Your JASMIN home directory and group workspaces will be accessible from within the notebook environment.</p>
+<hr />
+<h3 id="jasmin-setting-up-the-paidiverpy-conda-environment">Setting up the PAIDIVERPY Conda Environment</h3>
+<p>A preconfigured PAIDIVERPY Conda environment is available for use. This environment includes all necessary packages and dependencies and is built using the <code>environment.yml</code> file from the <a href="https://github.com/paidiver/paidiverpy/blob/main/environment.yml">Paidiverpy GitHub repository</a>.</p>
+<p>Since the environment is stored in a non-standard location (<code>/gws/nopw/j04/paidiver/paidiver-env</code>), Jupyter will not detect it automatically. Follow these steps to set it up:</p>
+<h4 id="jasmin-1-open-a-terminal">1. Open a Terminal</h4>
+<p>From the Jupyter launcher, click the <strong>Terminal</strong> icon.</p>
+<h4 id="jasmin-2-register-the-paidiver-kernel">2. Register the PAIDIVER Kernel</h4>
+<p>Run the following command:</p>
+<pre><code class="language-bash">mamba run -p /gws/nopw/j04/paidiver/paidiver-env python -m ipykernel install --user --name PAIDIVER
+</code></pre>
+<h4 id="jasmin-3-troubleshooting">3. Troubleshooting</h4>
+<p>If the command above fails, try running these commands first, then repeat step 2:</p>
+<pre><code class="language-bash">mamba init
+exec bash
+</code></pre>
+<h4 id="jasmin-4-launch-jupyter-with-the-paidiver-environment">4. Launch Jupyter with the PAIDIVER Environment</h4>
+<ul>
+<li>Open a new Jupyter launcher by clicking <strong>File</strong> &gt; <strong>New Launcher</strong>.</li>
+<li>A new notebook and console option named <strong>PAIDIVER</strong> should now be available (this may take about a minute to appear):</li>
+</ul>
+<p><img alt="Jupyter kernel choice mine" src="../assets/jupyter-kernel-choice-mine.png" /></p>
+<ul>
+<li>Click on <strong>PAIDIVER</strong> to open a notebook.</li>
+</ul>
+<h4 id="jasmin-5-verify-the-installation">5. Verify the Installation</h4>
+<p>Run the following command in the first cell:</p>
+<pre><code class="language-python">import paidiverpy
+paidiverpy.__version__
+</code></pre>
+<p>If the output is <code>0.1.2</code>, your environment is correctly set up.</p>
+<hr />
+<h3 id="jasmin-downloading-the-paidiverpy-tutorials">Downloading the PAIDIVERPY Tutorials</h3>
+<p>To obtain the tutorials for the workshop:</p>
+<ul>
+<li>Open a terminal and run:</li>
+</ul>
+<pre><code class="language-bash">cd ~
+git clone https://github.com/paidiver/paidiver-workshop.git
+</code></pre>
+<p>This will clone the tutorials repository into your JASMIN home directory.</p>
+<ul>
+<li>Ensure you are in your home directory by clicking the <strong>home folder</strong> icon in the Jupyter file browser.</li>
+</ul>
+<p><img alt="Jupyter home directory JASMIN icon" src="../assets/jupyter-homefolder.png" /></p>
+<ul>
+<li>Open the <code>paidiver-workshop</code> folder and navigate to the <code>tutorials</code> subfolder.</li>
+<li>You will find three Jupyter Notebook tutorials that will be used in this workshop.</li>
+</ul>
+<hr />
+<h3 id="jasmin-running-an-example-notebook">Running an Example Notebook</h3>
+<ol>
+<li>Open the <code>paidiver-workshop</code> folder containing the cloned repository.</li>
+<li>Navigate to the <code>tutorials</code> folder.</li>
+<li>Open the <code>introduction.ipynb</code> notebook.</li>
+<li>If prompted to select a kernel, choose <strong>PAIDIVER</strong>.</li>
+</ol>
+<p><img alt="Jupyter kernel choice" src="../assets/jupyter-kernel-choice-2.png" /></p>
+<p>You are now ready to start working with PAIDIVERPY in JASMIN!</p></section></div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "/",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../js/print-site.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
