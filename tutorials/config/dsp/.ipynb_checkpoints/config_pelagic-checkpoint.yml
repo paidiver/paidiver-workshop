@@ -11,13 +11,6 @@ general:
 #        output_bits: 8
 
 steps:
-
-  # - sampling:
-  #     mode: "depth"
-  #     params:
-  #       by: "lower"
-  #       value: 10
-
   - colour:
       name: "contrast"
       mode: "contrast"

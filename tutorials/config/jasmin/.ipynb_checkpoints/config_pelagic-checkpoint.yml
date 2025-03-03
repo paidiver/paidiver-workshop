@@ -12,6 +12,12 @@ general:
 
 steps:
 
+  # - sampling:
+  #     mode: "depth"
+  #     params:
+  #       by: "lower"
+  #       value: 10
+
   - colour:
       name: "contrast"
       mode: "contrast"
