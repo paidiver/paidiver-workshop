@@ -1,6 +1,8 @@
 # PAIDIVER Workshop DOCUMENTATION
 This project represents the documentation for the Paidiver Workshop
 
+This is the link for the workshop documentation: https://paidiver.github.io/paidiver-workshop/
+
 ## Information about MkDocs
 
 This documentation was assembled based on the mkdocs package.
