@@ -1,9 +1,9 @@
 general:
   input_path: "/groups/paidiver/images/benthic_haigfras"
-  output_path: "output"
+  output_path: "output/benthic"
   metadata_path: "metadata/metadata_benthic_ifdo.json"
   metadata_type: "IFDO"
-  image_type: "PNG"
+  image_open_args: "JPEG"
   n_jobs: 8
   rename: "datetime"
   sampling:
@@ -34,7 +34,7 @@ steps:
       mode: "sharpen"
       params:
         alpha: 1.5
-        beta: -0.5
+        beta: 0.5
 
   - colour:
       name: "contrast"
@@ -44,5 +44,6 @@ steps:
       name: "crop_images"
       mode: "crop"
       params:
-        x: [0, -1]
-        y: [0, -1000]
+        size: 0.5
+        size_type: "percent"
+        mode: "center"

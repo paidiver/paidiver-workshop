@@ -1,12 +1,16 @@
-"""This is an example of a custom algorithm that scales the image data using MinMaxScaler from sklearn.preprocessing."""
+"""Custom Paidiverpy algorithm that inverts an image."""
 
 import numpy as np
-from paidiverpy.custom_layer.base_custom_algorithm import BaseCustomAlgorithm
+from paidiverpy.custom_layer import CustomLayer
+from paidiverpy.models.custom_params import CustomParams
 
 
-class InvertColour(BaseCustomAlgorithm):
-    def process(self):
-        max_value = np.iinfo(self.image_data.dtype).max
-        inverted_array = max_value - self.image_data
+class InvertColour(CustomLayer):
+    """Invert the intensity of every pixel in an image."""
 
-        return inverted_array
+    @staticmethod
+    def invert(image_data: np.ndarray, params: CustomParams | None = None, **_kwargs: dict) -> np.ndarray:
+        """Return an intensity-inverted copy of ``image_data``."""
+        del params
+        max_value = np.iinfo(image_data.dtype).max
+        return max_value - image_data

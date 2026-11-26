@@ -1,36 +1,20 @@
 general:
-  input_path: "/groups/paidiver/images/benthic_clarion"
-  output_path: "output"
-  metadata_path: "metadata/metadata_benthic_csv.csv"
-  metadata_type: "CSV_FILE"
-  image_type: "PNG"
+  input_path: "/groups/paidiver/images/benthic_haigfras"
+  output_path: output/introduction
+  metadata_path: metadata/metadata_benthic_ifdo.json
+  metadata_type: IFDO
+  image_open_args: "JPEG"
   n_jobs: 1
   sampling:
-    - mode: "percent"
-      name: "sampling"
+    - mode: fixed
       params:
-        value: 0.1
-
+        value: 5
 steps:
   - colour:
-      name: "colour_alteration"
-      mode: "colour_alteration"
-      params:
-        method:
-          "white_balance"
+      name: grayscale
+      mode: grayscale
   - colour:
-      name: "gaussian_blur"
-      mode: "gaussian_blur"
+      name: gentle_blur
+      mode: gaussian_blur
       params:
         sigma: 1.0
-
-  - colour:
-      name: "sharpen"
-      mode: "sharpen"
-      params:
-        alpha: 1.5
-        beta: -0.5
-
-  - colour:
-      name: "contrast"
-      mode: "contrast"

@@ -1,4 +1,4 @@
-## DSP Documentation
+# DSP Documentation
 
 ### Logging into the DSP
 
@@ -61,7 +61,19 @@ import paidiverpy
 paidiverpy.__version__
 ```
 
-If the output is `0.1.2`, your environment is correctly set up.
+The expected version is `0.4.1`. In a second cell, check that the Library Layer is available:
+
+```python
+from paidiverpy.library_layer import LibraryLayer
+```
+
+If this import fails, check that you selected the **PAIDIVER** kernel. Workshop organisers can install the exact revision from `requirements-workshop.txt` in the workshop checkout:
+
+```bash
+python -m pip install -r requirements-workshop.txt
+```
+
+Run the install in the workshop environment you manage or in your own virtual environment. Restart the notebook kernel after changing the installation.
 
 ---
 
