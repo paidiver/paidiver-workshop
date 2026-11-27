@@ -32,7 +32,7 @@ From the Jupyter launcher, click the **Terminal** icon.
 Run the following command:
 
 ```bash
-mamba run -p /groups/paidiver/paidiver-env python -m ipykernel install --user --name PAIDIVER
+mamba run -p /groups/paidiver/paidiver-env python -m ipykernel install --user --name Paidiver
 ```
 
 #### 3. Troubleshooting
@@ -44,7 +44,30 @@ mamba init
 exec bash
 ```
 
-#### 4. Launch Jupyter with the PAIDIVER Environment
+#### 4. Download the example data
+
+Run the commands below:
+
+```bash
+cd
+micromamba activate /groups/paidiver/paidiver-env
+wget https://paidiver-o.s3-ext.jc.rl.ac.uk/paidiverpy/tutorials.zip
+unzip tutorials.zip -d paidiver/
+```
+Then check if the tutorials are available by running:
+
+```bash
+ls paidiver/tutorials
+```
+
+
+You should see as output:
+
+```output
+1-introduction.ipynb  2-benthic.ipynb  3-pelagic.ipynb  4-custom-and-library.ipynb  config  custom_algorithm  images  metadata
+```
+
+#### 5. Launch Jupyter with the Paidiver environment
 
 - Open a new Jupyter launcher by clicking **File** > **New Launcher**.
 - A new notebook and console option named **PAIDIVER** should now be available (this may take about a minute to appear):
@@ -52,7 +75,7 @@ exec bash
 ![Jupyter kernel choice mine](assets/jupyter-kernel-choice-mine.png)
 - Click on **PAIDIVER** to open a notebook.
 
-#### 5. Verify the Installation
+#### 6. Verify the Installation
 
 Run the following command in the first cell:
 
@@ -61,41 +84,9 @@ import paidiverpy
 paidiverpy.__version__
 ```
 
-The expected version is `0.4.1`. In a second cell, check that the Library Layer is available:
+The expected version is `0.4.2`.
 
-```python
-from paidiverpy.library_layer import LibraryLayer
-```
-
-If this import fails, check that you selected the **PAIDIVER** kernel. Workshop organisers can install the exact revision from `requirements-workshop.txt` in the workshop checkout:
-
-```bash
-python -m pip install -r requirements-workshop.txt
-```
-
-Run the install in the workshop environment you manage or in your own virtual environment. Restart the notebook kernel after changing the installation.
-
----
-
-### Downloading the PAIDIVERPY Tutorials
-
-To obtain the tutorials for the workshop:
-
-- Open a terminal and run:
-
-```bash
-cd ~
-git clone https://github.com/paidiver/paidiver-workshop.git
-```
-
-  This will clone the tutorials repository into your DSP home directory.
-
-- Ensure you are in your home directory by clicking the **home folder** icon in the Jupyter file browser.
-
-   ![Jupyter home directory DSP icon](assets/jupyter-homefolder_dsp.png)
-
-- Open the `paidiver-workshop` folder and navigate to the `tutorials` subfolder.
-- You will find three Jupyter Notebook tutorials that will be used in this workshop.
+If this import fails, check that you selected the **Paidiver** kernel.
 
 ---
 
@@ -104,7 +95,7 @@ git clone https://github.com/paidiver/paidiver-workshop.git
 1. Open the `paidiver-workshop` folder containing the cloned repository.
 2. Navigate to the `tutorials` folder.
 3. Open the `introduction.ipynb` notebook.
-4. If prompted to select a kernel, choose **PAIDIVER**.
+4. If prompted to select a kernel, choose **Paidiver**.
 
    ![Jupyter kernel choice](assets/jupyter-kernel-choice-2.png)
 

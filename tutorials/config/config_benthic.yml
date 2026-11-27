@@ -1,15 +1,14 @@
 general:
-  input_path: "/groups/paidiver/images/benthic_haigfras"
-  output_path: "output/benthic"
-  metadata_path: "metadata/metadata_benthic_ifdo.json"
+  input_path: "images/benthic2"
+  metadata_path: "metadata/metadata_benthic2.json"
   metadata_type: "IFDO"
-  image_open_args: "JPEG"
-  n_jobs: 8
+  output_path: "output/benthic2"  
+  n_jobs: 2
   rename: "datetime"
   sampling:
     - mode: "fixed"
       params:
-        value: 10
+        value: 50
 steps:
   - colour:
       name: "colour_correction"
@@ -20,8 +19,8 @@ steps:
       mode: "datetime"
       # test: True
       params:
-        min: "2016-05-11 04:14:00"
-        max: "2016-05-11 09:26:12"
+        min: "2013-04-23 00:00:00"
+        max: "2013-04-23 23:59:00"
 
   - colour:
       name: "colour_correction"

@@ -1,0 +1,26 @@
+general:
+  input_path: "images/benthic2"
+  metadata_path: "metadata/metadata_benthic2.json"
+  metadata_type: "IFDO"
+  output_path: output/extensions
+  n_jobs: 1
+  sampling:
+    - mode: fixed
+      params:
+        value: 5
+
+steps:
+  - colour:
+      name: grayscale
+      mode: grayscale
+  - custom:
+      name: invert
+      file_path: custom_algorithm/invert.py
+      class_name: InvertColour
+      processing_type: image
+  - library:
+      name: median_filter
+      library: opencv
+      function: medianBlur
+      params:
+        ksize: 5

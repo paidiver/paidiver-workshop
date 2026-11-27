@@ -1,14 +1,11 @@
 general:
-  input_path: "/groups/paidiver/images/pelagic"
-  output_path: "output/pelagic"
-  metadata_path: "metadata/metadata_pelagic.csv"
+  input_path: "images/plankton"
+  metadata_path: "metadata/metadata_plankton.csv"
   metadata_type: "CSV_FILE"
   image_open_args: "BMP"
+  output_path: "output/pelagic"
   n_jobs: 1
-  sampling:
-    - mode: fixed
-      params:
-        value: 10
+
 steps:
   - colour:
       name: even_lighting

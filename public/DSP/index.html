@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>DSP - PAIDIVER Workshop</title>
+        <title>DSP Documentation - PAIDIVER Workshop</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -17,12 +17,6 @@
         <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <link href="../css/print-site-enum-headings1.css" rel="stylesheet">
-        <link href="../css/print-site-enum-headings2.css" rel="stylesheet">
-        <link href="../css/print-site-enum-headings3.css" rel="stylesheet">
-        <link href="../css/print-site-enum-headings4.css" rel="stylesheet">
-        <link href="../css/print-site-enum-headings5.css" rel="stylesheet">
-        <link href="../css/print-site-enum-headings6.css" rel="stylesheet">
         <link href="../css/print-site.css" rel="stylesheet">
         <link href="../css/print-site-mkdocs.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -46,10 +40,10 @@
                                 <a href=".." class="nav-link">Workshop</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">DSP</a>
+                                <a href="./" class="nav-link active" aria-current="page">DSP Documentation</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../jasmin/" class="nav-link">Jasmin</a>
+                                <a href="../jasmin/" class="nav-link">JASMIN Documentation</a>
                             </li>
                         </ul>
 
@@ -87,7 +81,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#dsp-documentation" class="nav-link">DSP Documentation</a>
+            <li class="nav-item" data-bs-level="1"><a href="#dsp-documentation" class="nav-link">DSP Documentation</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -96,7 +90,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="dsp-documentation">DSP Documentation</h2>
+<h1 id="dsp-documentation">DSP Documentation</h1>
 <h3 id="logging-into-the-dsp">Logging into the DSP</h3>
 <p>To access the DSP environment, follow these steps:</p>
 <ol>
@@ -118,51 +112,47 @@
 <p>From the Jupyter launcher, click the <strong>Terminal</strong> icon.</p>
 <h4 id="2-register-the-paidiver-kernel">2. Register the PAIDIVER Kernel</h4>
 <p>Run the following command:</p>
-<pre><code class="language-bash">mamba run -p /groups/paidiver/paidiver-env python -m ipykernel install --user --name PAIDIVER
+<pre><code class="language-bash">mamba run -p /groups/paidiver/paidiver-env python -m ipykernel install --user --name Paidiver
 </code></pre>
 <h4 id="3-troubleshooting">3. Troubleshooting</h4>
 <p>If the command above fails, try running these commands first, then repeat step 2:</p>
 <pre><code class="language-bash">mamba init
 exec bash
 </code></pre>
-<h4 id="4-launch-jupyter-with-the-paidiver-environment">4. Launch Jupyter with the PAIDIVER Environment</h4>
+<h4 id="4-download-the-example-data">4. Download the example data</h4>
+<p>Run the commands below:</p>
+<pre><code class="language-bash">cd
+micromamba activate /groups/paidiver/paidiver-env
+wget https://paidiver-o.s3-ext.jc.rl.ac.uk/paidiverpy/tutorials.zip
+unzip tutorials.zip -d paidiver/
+</code></pre>
+<p>Then check if the tutorials are available by running:</p>
+<pre><code class="language-bash">ls paidiver/tutorials
+</code></pre>
+<p>You should see as output:</p>
+<pre><code class="language-output">1-introduction.ipynb  2-benthic.ipynb  3-pelagic.ipynb  4-custom-and-library.ipynb  config  custom_algorithm  images  metadata
+</code></pre>
+<h4 id="5-launch-jupyter-with-the-paidiver-environment">5. Launch Jupyter with the Paidiver environment</h4>
 <ul>
 <li>Open a new Jupyter launcher by clicking <strong>File</strong> &gt; <strong>New Launcher</strong>.</li>
 <li>A new notebook and console option named <strong>PAIDIVER</strong> should now be available (this may take about a minute to appear):</li>
 </ul>
 <p><img alt="Jupyter kernel choice mine" src="../assets/jupyter-kernel-choice-mine.png" />
 - Click on <strong>PAIDIVER</strong> to open a notebook.</p>
-<h4 id="5-verify-the-installation">5. Verify the Installation</h4>
+<h4 id="6-verify-the-installation">6. Verify the Installation</h4>
 <p>Run the following command in the first cell:</p>
 <pre><code class="language-python">import paidiverpy
 paidiverpy.__version__
 </code></pre>
-<p>If the output is <code>0.1.2</code>, your environment is correctly set up.</p>
-<hr />
-<h3 id="downloading-the-paidiverpy-tutorials">Downloading the PAIDIVERPY Tutorials</h3>
-<p>To obtain the tutorials for the workshop:</p>
-<ul>
-<li>Open a terminal and run:</li>
-</ul>
-<pre><code class="language-bash">cd ~
-git clone https://github.com/paidiver/paidiver-workshop.git
-</code></pre>
-<p>This will clone the tutorials repository into your DSP home directory.</p>
-<ul>
-<li>Ensure you are in your home directory by clicking the <strong>home folder</strong> icon in the Jupyter file browser.</li>
-</ul>
-<p><img alt="Jupyter home directory DSP icon" src="../assets/jupyter-homefolder_dsp.png" /></p>
-<ul>
-<li>Open the <code>paidiver-workshop</code> folder and navigate to the <code>tutorials</code> subfolder.</li>
-<li>You will find three Jupyter Notebook tutorials that will be used in this workshop.</li>
-</ul>
+<p>The expected version is <code>0.4.2</code>.</p>
+<p>If this import fails, check that you selected the <strong>Paidiver</strong> kernel.</p>
 <hr />
 <h3 id="running-an-example-notebook">Running an Example Notebook</h3>
 <ol>
 <li>Open the <code>paidiver-workshop</code> folder containing the cloned repository.</li>
 <li>Navigate to the <code>tutorials</code> folder.</li>
 <li>Open the <code>introduction.ipynb</code> notebook.</li>
-<li>If prompted to select a kernel, choose <strong>PAIDIVER</strong>.</li>
+<li>If prompted to select a kernel, choose <strong>Paidiver</strong>.</li>
 </ol>
 <p><img alt="Jupyter kernel choice" src="../assets/jupyter-kernel-choice-2.png" /></p>
 <p>You are now ready to start working with PAIDIVERPY in DSP!</p></div>
