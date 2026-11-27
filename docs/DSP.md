@@ -70,10 +70,10 @@ You should see as output:
 #### 5. Launch Jupyter with the Paidiver environment
 
 - Open a new Jupyter launcher by clicking **File** > **New Launcher**.
-- A new notebook and console option named **PAIDIVER** should now be available (this may take about a minute to appear):
+- A new notebook and console option named **Paidiver** should now be available (this may take about a minute to appear):
 
 ![Jupyter kernel choice mine](assets/jupyter-kernel-choice-mine.png)
-- Click on **PAIDIVER** to open a notebook.
+- Click on **Paidiver** to open a notebook.
 
 #### 6. Verify the Installation
 
