@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>JASMIN Documentation - PAIDIVER Workshop</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../css/print-site.css" rel="stylesheet">
+        <link href="../css/print-site-mkdocs.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">PAIDIVER Workshop</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Workshop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DSP/" class="nav-link">DSP Documentation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">JASMIN Documentation</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../DSP/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#jasmin-documentation" class="nav-link">JASMIN Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="jasmin-documentation">JASMIN Documentation</h1>
+<h3 id="logging-into-the-jasmin">Logging into the JASMIN</h3>
+<p>To access the JASMIN environment, follow these steps:</p>
+<ol>
+<li>In your web browser visit <a href="https://notebooks.jasmin.ac.uk">https://notebooks.jasmin.ac.uk</a></li>
+<li>Login using your JASMIN username and password</li>
+<li>You will then be emailed a one time code, paste this into the verification code box.</li>
+<li>A Jupyter notebook interface will now be started and you can create a new notebook or open a terminal.</li>
+</ol>
+<p>Your JASMIN home directory and group workspaces will be accessible from within the notebook environment.</p>
+<hr />
+<h3 id="setting-up-the-paidiverpy-conda-environment">Setting up the PAIDIVERPY Conda Environment</h3>
+<p>A preconfigured PAIDIVERPY Conda environment is available for use. This environment includes all necessary packages and dependencies and is built using the <code>environment.yml</code> file from the <a href="https://github.com/paidiver/paidiverpy/blob/main/environment.yml">Paidiverpy GitHub repository</a>.</p>
+<p>Since the environment is stored in a non-standard location (<code>/work/scratch-nopw2/tobfer/paidiver</code>), Jupyter will not detect it automatically. Follow these steps to set it up:</p>
+<h4 id="1-open-a-terminal">1. Open a Terminal</h4>
+<p>From the Jupyter launcher, click the <strong>Terminal</strong> icon.</p>
+<h4 id="2-register-the-paidiver-kernel">2. Register the PAIDIVER Kernel</h4>
+<p>Run the following command:</p>
+<pre><code class="language-bash">mamba run -p /work/scratch-nopw2/tobfer/paidiver python -m ipykernel install --user --name Paidiver
+</code></pre>
+<h4 id="3-troubleshooting">3. Troubleshooting</h4>
+<p>If the command above fails, try running these commands first, then repeat step 2:</p>
+<pre><code class="language-bash">mamba init
+exec bash
+</code></pre>
+<h4 id="4-download-the-example-data">4. Download the example data</h4>
+<p>Run the commands below:</p>
+<pre><code class="language-bash">cd
+micromamba activate /groups/paidiver/paidiver-env
+wget https://paidiver-o.s3-ext.jc.rl.ac.uk/paidiverpy/tutorials.zip
+unzip tutorials.zip -d paidiver/
+</code></pre>
+<p>Then check if the tutorials are available by running:</p>
+<pre><code class="language-bash">ls paidiver/tutorials
+</code></pre>
+<p>You should see as output:</p>
+<pre><code class="language-output">1-introduction.ipynb  2-benthic.ipynb  3-pelagic.ipynb  4-custom-and-library.ipynb  config  custom_algorithm  images  metadata
+</code></pre>
+<h4 id="5-launch-jupyter-with-the-paidiver-environment">5. Launch Jupyter with the Paidiver Environment</h4>
+<ul>
+<li>Open a new Jupyter launcher by clicking <strong>File</strong> &gt; <strong>New Launcher</strong>.</li>
+<li>A new notebook and console option named <strong>Paidiver</strong> should now be available (this may take about a minute to appear):</li>
+</ul>
+<p><img alt="Jupyter kernel choice mine" src="../assets/jupyter-kernel-choice-mine.png" /></p>
+<ul>
+<li>Click on <strong>Paidiver</strong> to open a notebook.</li>
+</ul>
+<h4 id="6-verify-the-installation">6. Verify the Installation</h4>
+<p>Run the following command in the first cell:</p>
+<pre><code class="language-python">import paidiverpy
+paidiverpy.__version__
+</code></pre>
+<p>The expected version is <code>0.4.2</code>.</p>
+<p>If this import fails, check that you selected the <strong>Paidiver</strong> kernel.</p>
+<hr />
+<h3 id="running-an-example-notebook">Running an Example Notebook</h3>
+<ol>
+<li>Open the <code>paidiver-workshop</code> folder containing the cloned repository.</li>
+<li>Navigate to the <code>tutorials</code> folder.</li>
+<li>Open the <code>introduction.ipynb</code> notebook.</li>
+<li>If prompted to select a kernel, choose <strong>PAIDIVER</strong>.</li>
+</ol>
+<p><img alt="Jupyter kernel choice" src="../assets/jupyter-kernel-choice-2.png" /></p>
+<p>You are now ready to start working with PAIDIVERPY in JASMIN!</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../js/print-site.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
